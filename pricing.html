@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — SupoClip</title>
+  <meta name="description" content="SupoClip is free forever. No tiers, no metered usage, no watermarks. Self-host or use hosted." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif'],display:['Space Grotesk','Inter','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="glass fixed top-0 inset-x-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 font-display font-bold text-lg"><span class="w-8 h-8 rounded-lg grad-bg grid place-items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></span>SupoClip</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm text-zinc-300">
+        <a href="features.html" class="hover:text-white transition">Features</a>
+        <a href="pricing.html" class="text-white">Pricing</a>
+        <a href="docs.html" class="hover:text-white transition">Docs</a>
+        <a href="about.html" class="hover:text-white transition">About</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://github.com/FujiwaraChoki/supoclip" target="_blank" rel="noopener" class="btn-ghost px-4 py-2 rounded-lg text-sm font-medium">GitHub</a>
+        <a href="docs.html" class="btn-primary px-4 py-2 rounded-lg text-sm font-semibold">Get started</a>
+      </div>
+      <button id="menuBtn" class="md:hidden btn-ghost p-2 rounded-lg" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 px-4 py-4 space-y-3 bg-black/80">
+      <a href="features.html" class="block text-zinc-300">Features</a>
+      <a href="pricing.html" class="block text-zinc-300">Pricing</a>
+      <a href="docs.html" class="block text-zinc-300">Docs</a>
+      <a href="about.html" class="block text-zinc-300">About</a>
+    </div>
+  </header>
+  <main class="pt-16">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <h1 class="font-display text-4xl sm:text-5xl font-bold">Free. <span class="grad-text">Forever.</span></h1>
+        <p class="mt-4 text-zinc-400">No tiers. No metered usage. No watermarks. No subscription. Pick how you want to run it.</p>
+      </div>
+      <div class="mt-12 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="card p-8 reveal">
+          <div class="text-xs uppercase tracking-widest text-zinc-500">Self-host</div>
+          <div class="font-display text-5xl font-bold mt-2">$0</div>
+          <p class="mt-2 text-zinc-400 text-sm">Run on your own hardware. Unlimited usage, full control, AGPL-3.0.</p>
+          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+            <li class="flex gap-2"><svg class="text-emerald-400 shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Docker Compose one-command setup</li>
+            <li class="flex gap-2"><svg class="text-emerald-400 shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Choose your LLM: Gemini, GPT, Claude, or local Ollama</li>
+            <li class="flex gap-2"><svg class="text-emerald-400 shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> No watermarks, no branding</li>
+            <li class="flex gap-2"><svg class="text-emerald-400 shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> REST API + MCP server included</li>
+          </ul>
+          <a href="docs.html" class="btn-primary mt-8 w-full py-3 rounded-xl font-semibold text-center block">Get started</a>
+        </div>
+        <div class="card p-8 reveal border-violet-500/40">
+          <div class="text-xs uppercase tracking-widest text-violet-300">Hosted</div>
+          <div class="font-display text-5xl font-bold mt-2">$0</div>
+          <p class="mt-2 text-zinc-400 text-sm">Use the hosted version. Same pipeline, zero infrastructure.</p>
+          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+            <li class="flex gap-2"><svg class="text-emerald-400 shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> No server to manage</li>
+            <li class="flex gap-2"><svg class="text-emerald-400 shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> iOS app available</li>
+            <li class="flex gap-2"><svg class="text-emerald-400 shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Open source — inspect everything</li>
+            <li class="flex gap-2"><svg class="text-emerald-400 shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Your content stays yours</li>
+          </ul>
+          <a href="https://www.supoclip.com" target="_blank" rel="noopener" class="btn-primary mt-8 w-full py-3 rounded-xl font-semibold text-center block">Open hosted app</a>
+        </div>
+      </div>
+      <div class="mt-16 max-w-3xl mx-auto text-center reveal">
+        <h3 class="font-display text-xl font-bold">Why free?</h3>
+        <p class="mt-3 text-zinc-400 text-sm">SupoClip exists because good video clips shouldn't come with ugly watermarks or platform lock-in. OpusClip meters your usage and brands your exports; SupoClip doesn't. It's AGPL-3.0 — fork it, extend it, run it however you like.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-white/5"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-xs text-zinc-500">© <span id="year"></span> SupoClip · Open source under AGPL-3.0 · <a href="https://github.com/FujiwaraChoki/supoclip" class="hover:text-white">GitHub</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
